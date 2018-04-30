@@ -1,32 +1,41 @@
 .grid-container{
-    width: 100%;
     -ms-display: grid;
     display: grid;
     -ms-grid-template-columns: repeat(12, 1fr);
     grid-template-columns: repeat(12, 1fr);
     /*HERE YOU CAN SET YOUR CUSTOM COLUMN GAP*/
-    -ms-grid-column-gap:1%;
-    grid-column-gap:1%;
+    -ms-grid-column-gap:1vmax;
+    grid-column-gap:1vmax;
     /*HERE YOU CAN SET YOUR CUSTOM ROW GAP*/
-    -ms-grid-row-gap: 1%;
-    grid-row-gap: 1%;
+    -ms-grid-row-gap: 1vmax;
+    grid-row-gap: 1vmax;
+
+    /*grid-auto-flow DETERMINES HOW THE GRID WILL FILL UP. IF YOU ENABLE THE grid-auto-flow PROPERTY, grid-column-gap WILL HAVE NO EFFECT ON THE AUTO-GENERATED ROWS, SO YOU WILL NEED TO SET A MARGIN TOP &/OR BOTTOM TO THE ELEMENTS INSIDE THE GRID CONTAINER IF YOU WANT A ROW GAP.
+
+    dense tells the auto-placement algorithm to attempt to fill in holes earlier in the grid if smaller items come up later,
+
+    row TELLS THE AUTO-PLACEMENT ALGORITHM TO FILL IN EACH ROW IN TURN, ADDING NEW ROWS AS NECESSARY
+    
+    column TELLS THE AUTO-PLACEMENT ALGORITHM TO FILL IN EACH COLUMN IN TURN, ADDING NEW COLUMNS AS NECESSARY */
+    -ms-grid-auto-flow: dense;
+    grid-auto-flow: dense;
 }
 
 
 /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-.grid-container-col-xs-justify-items-start{
+.col-xs-justify-items-start{
     -ms-justify-items:start;
     justify-items:start;
 }
-.grid-container-col-xs-justify-items-end{
+.col-xs-justify-items-end{
     -ms-justify-items:end;
     justify-items:end;
 }
-.grid-container-col-xs-justify-items-center{
+.col-xs-justify-items-center{
     -ms-justify-items:center;
     justify-items:center;
 }
-.grid-container-col-xs-justify-items-stretch{
+.col-xs-justify-items-stretch{
     -ms-justify-items:stretch;
     justify-items:stretch;
 }
@@ -34,50 +43,50 @@
 
 
 /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-.grid-container-col-xs-align-items-start{
+.col-xs-align-items-start{
     -ms-align-items:start;
     align-items:start;
 }
-.grid-container-col-xs-align-items-end{
+.col-xs-align-items-end{
     -ms-align-items:end;
     align-items:end;
 }
-.grid-container-col-xs-align-items-center{
+.col-xs-align-items-center{
     -ms-align-items:center;
     align-items:center;
 }
-.grid-container-col-xs-align-items-stretch{
+.col-xs-align-items-stretch{
     -ms-align-items:stretch;
     align-items:stretch;
 }
 
 
 /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-.grid-container-col-xs-justify-content-start{
+.col-xs-justify-content-start{
     -ms-justify-content:start;
     justify-content:start;
 }
-.grid-container-col-xs-justify-content-end{
+.col-xs-justify-content-end{
     -ms-justify-content:end;
     justify-content:end;
 }
-.grid-container-col-xs-justify-content-center{
+.col-xs-justify-content-center{
     -ms-justify-content:center;
     justify-content:center;
 }
-.grid-container-col-xs-justify-content-stretch{
+.col-xs-justify-content-stretch{
     -ms-justify-content:stretch;
     justify-content:stretch;
 }
-.grid-container-col-xs-justify-content-space-around{
+.col-xs-justify-content-space-around{
     -ms-justify-content:space-around;
     justify-content:space-around;
 }
-.grid-container-col-xs-justify-content-space-between{
+.col-xs-justify-content-space-between{
    -ms-justify-content:space-between; 
     justify-content:space-between;
 }
-.grid-container-col-xs-justify-content-space-evenly{
+.col-xs-justify-content-space-evenly{
     -ms-justify-content:space-evenly;
     justify-content:space-evenly;
 }
@@ -86,46 +95,46 @@
 
 
 /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-.grid-container-col-xs-align-content-start{
+.col-xs-align-content-start{
     -ms-align-content:start;
     align-content:start;
 }
-.grid-container-col-xs-align-content-end{
+.col-xs-align-content-end{
     -ms-align-content:end;
     align-content:end;
 }
-.grid-container-col-xs-align-content-center{
+.col-xs-align-content-center{
     -ms-align-content:center;
     align-content:center;
 }
 
-.grid-container-col-xs-align-content-stretch{
+.col-xs-align-content-stretch{
     -ms-align-content:stretch;
     align-content:stretch;
 }
-.grid-container-col-xs-align-content-space-around{
+.col-xs-align-content-space-around{
    -ms-align-content:space-around;
     align-content:space-around;
 }
-.grid-container-col-xs-align-content-space-between{
+.col-xs-align-content-space-between{
     -ms-align-content:start;
     align-content:space-between;
 }
-.grid-container-col-xs-align-content-space-evenly{
+.col-xs-align-content-space-evenly{
     -ms-align-content:end;
     align-content:space-evenly;
 }
 
 
-.grid-container-col-xs-grid-auto-flow-row{
+.col-xs-grid-auto-flow-row{
     -ms-align-content:center;
     grid-auto-flow:row;
 }
-.grid-container-col-xs-grid-auto-flow-column{
+.col-xs-grid-auto-flow-column{
     -ms-align-content:stretch;
     grid-auto-flow:column;
 }
-.grid-container-col-xs-grid-auto-flow-dense{
+.col-xs-grid-auto-flow-dense{
     -ms-align-content:space-around;
     grid-auto-flow:dense;
 }
@@ -133,52 +142,52 @@
 
 
 .col-xs-1{
-    -ms-grid-column: span 1;
-    grid-column: span 1;
+    -ms-grid-column-end: span 1;
+    grid-column-end: span 1;
 }
 .col-xs-2{
-    -ms-grid-column: span 2;
-    grid-column: span 2;
+    -ms-grid-column-end: span 2;
+    grid-column-end: span 2;
 }
 .col-xs-3{
-    -ms-grid-column: span 3;
-    grid-column: span 3;
+    -ms-grid-column-end: span 3;
+    grid-column-end: span 3;
 }
 .col-xs-4{
-    -ms-grid-column: span 4;
-    grid-column: span 4;
+    -ms-grid-column-end: span 4;
+    grid-column-end: span 4;
 }
 .col-xs-5{
-    -ms-grid-column: span 5;
-    grid-column: span 5;
+    -ms-grid-column-end: span 5;
+    grid-column-end: span 5;
 }
 .col-xs-6{
-    -ms-grid-column: span 6;
-    grid-column: span 6;
+    -ms-grid-column-end: span 6;
+    grid-column-end: span 6;
 }
 .col-xs-7{
-    -ms-grid-column: span 7;
-    grid-column: span 7;
+    -ms-grid-column-end: span 7;
+    grid-column-end: span 7;
 }
 .col-xs-8{
-    -ms-grid-column: span 8;
-    grid-column: span 8;
+    -ms-grid-column-end: span 8;
+    grid-column-end: span 8;
 }
 .col-xs-9{
-    -ms-grid-column: span 9;
-    grid-column: span 9;
+    -ms-grid-column-end: span 9;
+    grid-column-end: span 9;
 }
 .col-xs-10{
-    -ms-grid-column: span 10;
-    grid-column: span 10;
+    -ms-grid-column-end: span 10;
+    grid-column-end: span 10;
 }
 .col-xs-11{
-    -ms-grid-column: span 11;
-    grid-column: span 11;
+    -ms-grid-column-end: span 11;
+    grid-column-end: span 11;
 }
 .col-xs-12{
-    -ms-grid-column: span 12;
-    grid-column: span 12;
+    -ms-grid-column-end: span 12;
+    grid-column-end: span 12;
 }
 
 
@@ -223,6 +232,10 @@
     -ms-grid-column-start: 11;
     grid-column-start: 11;
 }
+.col-xs-offset-12{
+    -ms-grid-column-start: 12;
+    grid-column-start: 12;
+}
 
 
 
@@ -264,19 +277,19 @@
 @media only screen and (min-width:48em){    
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-sm-justify-items-start{
+    .col-sm-justify-items-start{
         -ms-justify-items:start;
         justify-items:start;
     }
-    .grid-container-col-sm-justify-items-end{
+    .col-sm-justify-items-end{
         -ms-justify-items:end;
         justify-items:end;
     }
-    .grid-container-col-sm-justify-items-center{
+    .col-sm-justify-items-center{
         -ms-justify-items:center;
         justify-items:center;
     }
-    .grid-container-col-sm-justify-items-stretch{
+    .col-sm-justify-items-stretch{
         -ms-justify-items:stretch;
         justify-items:stretch;
     }
@@ -284,50 +297,50 @@
     
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-sm-align-items-start{
+    .col-sm-align-items-start{
         -ms-align-items:start;
         align-items:start;
     }
-    .grid-container-col-sm-align-items-end{
+    .col-sm-align-items-end{
         -ms-align-items:end;
         align-items:end;
     }
-    .grid-container-col-sm-align-items-center{
+    .col-sm-align-items-center{
         -ms-align-items:center;
         align-items:center;
     }
-    .grid-container-col-sm-align-items-stretch{
+    .col-sm-align-items-stretch{
         -ms-align-items:stretch;
         align-items:stretch;
     }
     
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-sm-justify-content-start{
+    .col-sm-justify-content-start{
         -ms-justify-content:start;
         justify-content:start;
     }
-    .grid-container-col-sm-justify-content-end{
+    .col-sm-justify-content-end{
         -ms-justify-content:end;
         justify-content:end;
     }
-    .grid-container-col-sm-justify-content-center{
+    .col-sm-justify-content-center{
         -ms-justify-content:center;
         justify-content:center;
     }
-    .grid-container-col-sm-justify-content-stretch{
+    .col-sm-justify-content-stretch{
         -ms-justify-content:stretch;
         justify-content:stretch;
     }
-    .grid-container-col-sm-justify-content-space-around{
+    .col-sm-justify-content-space-around{
         -ms-justify-content:space-around;
         justify-content:space-around;
     }
-    .grid-container-col-sm-justify-content-space-between{
+    .col-sm-justify-content-space-between{
        -ms-justify-content:space-between; 
         justify-content:space-between;
     }
-    .grid-container-col-sm-justify-content-space-evenly{
+    .col-sm-justify-content-space-evenly{
         -ms-justify-content:space-evenly;
         justify-content:space-evenly;
     }
@@ -336,46 +349,46 @@
     
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-sm-align-content-start{
+    .col-sm-align-content-start{
         -ms-align-content:start;
         align-content:start;
     }
-    .grid-container-col-sm-align-content-end{
+    .col-sm-align-content-end{
         -ms-align-content:end;
         align-content:end;
     }
-    .grid-container-col-sm-align-content-center{
+    .col-sm-align-content-center{
         -ms-align-content:center;
         align-content:center;
     }
     
-    .grid-container-col-sm-align-content-stretch{
+    .col-sm-align-content-stretch{
         -ms-align-content:stretch;
         align-content:stretch;
     }
-    .grid-container-col-sm-align-content-space-around{
+    .col-sm-align-content-space-around{
        -ms-align-content:space-around;
         align-content:space-around;
     }
-    .grid-container-col-sm-align-content-space-between{
+    .col-sm-align-content-space-between{
         -ms-align-content:start;
         align-content:space-between;
     }
-    .grid-container-col-sm-align-content-space-evenly{
+    .col-sm-align-content-space-evenly{
         -ms-align-content:end;
         align-content:space-evenly;
     }
     
     
-    .grid-container-col-sm-grid-auto-flow-row{
+    .col-sm-grid-auto-flow-row{
         -ms-align-content:center;
         grid-auto-flow:row;
     }
-    .grid-container-col-sm-grid-auto-flow-column{
+    .col-sm-grid-auto-flow-column{
         -ms-align-content:stretch;
         grid-auto-flow:column;
     }
-    .grid-container-col-sm-grid-auto-flow-dense{
+    .col-sm-grid-auto-flow-dense{
         -ms-align-content:space-around;
         grid-auto-flow:dense;
     }
@@ -383,52 +396,52 @@
     
     
     .col-sm-1{
-        -ms-grid-column: span 1;
-        grid-column: span 1;
+        -ms-grid-column-end: span 1;
+        grid-column-end: span 1;
     }
     .col-sm-2{
-        -ms-grid-column: span 2;
-        grid-column: span 2;
+        -ms-grid-column-end: span 2;
+        grid-column-end: span 2;
     }
     .col-sm-3{
-        -ms-grid-column: span 3;
-        grid-column: span 3;
+        -ms-grid-column-end: span 3;
+        grid-column-end: span 3;
     }
     .col-sm-4{
-        -ms-grid-column: span 4;
-        grid-column: span 4;
+        -ms-grid-column-end: span 4;
+        grid-column-end: span 4;
     }
     .col-sm-5{
-        -ms-grid-column: span 5;
-        grid-column: span 5;
+        -ms-grid-column-end: span 5;
+        grid-column-end: span 5;
     }
     .col-sm-6{
-        -ms-grid-column: span 6;
-        grid-column: span 6;
+        -ms-grid-column-end: span 6;
+        grid-column-end: span 6;
     }
     .col-sm-7{
-        -ms-grid-column: span 7;
-        grid-column: span 7;
+        -ms-grid-column-end: span 7;
+        grid-column-end: span 7;
     }
     .col-sm-8{
-        -ms-grid-column: span 8;
-        grid-column: span 8;
+        -ms-grid-column-end: span 8;
+        grid-column-end: span 8;
     }
     .col-sm-9{
-        -ms-grid-column: span 9;
-        grid-column: span 9;
+        -ms-grid-column-end: span 9;
+        grid-column-end: span 9;
     }
     .col-sm-10{
-        -ms-grid-column: span 10;
-        grid-column: span 10;
+        -ms-grid-column-end: span 10;
+        grid-column-end: span 10;
     }
     .col-sm-11{
-        -ms-grid-column: span 11;
-        grid-column: span 11;
+        -ms-grid-column-end: span 11;
+        grid-column-end: span 11;
     }
     .col-sm-12{-ms-justify-self:;
-        -ms-grid-column: span 12;
-        grid-column: span 12;
+        -ms-grid-column-end: span 12;
+        grid-column-end: span 12;
     }
 
 
@@ -472,6 +485,10 @@
         -ms-grid-column-start: 11;
         grid-column-start: 11;
     }
+    .col-sm-offset-12{
+        -ms-grid-column-start: 12;
+        grid-column-start: 12;
+    }
 
     
     
@@ -513,19 +530,19 @@
 @media only screen and (min-width:62em){    
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-md-justify-items-start{
+    .col-md-justify-items-start{
         -ms-justify-items:start;
         justify-items:start;
     }
-    .grid-container-col-md-justify-items-end{
+    .col-md-justify-items-end{
         -ms-justify-items:end;
         justify-items:end;
     }
-    .grid-container-col-md-justify-items-center{
+    .col-md-justify-items-center{
         -ms-justify-items:center;
         justify-items:center;
     }
-    .grid-container-col-md-justify-items-stretch{
+    .col-md-justify-items-stretch{
         -ms-justify-items:stretch;
         justify-items:stretch;
     }
@@ -533,50 +550,50 @@
     
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-md-align-items-start{
+    .col-md-align-items-start{
         -ms-align-items:start;
         align-items:start;
     }
-    .grid-container-col-md-align-items-end{
+    .col-md-align-items-end{
         -ms-align-items:end;
         align-items:end;
     }
-    .grid-container-col-md-align-items-center{
+    .col-md-align-items-center{
         -ms-align-items:center;
         align-items:center;
     }
-    .grid-container-col-md-align-items-stretch{
+    .col-md-align-items-stretch{
         -ms-align-items:stretch;
         align-items:stretch;
     }
     
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-md-justify-content-start{
+    .col-md-justify-content-start{
         -ms-justify-content:start;
         justify-content:start;
     }
-    .grid-container-col-md-justify-content-end{
+    .col-md-justify-content-end{
         -ms-justify-content:end;
         justify-content:end;
     }
-    .grid-container-col-md-justify-content-center{
+    .col-md-justify-content-center{
         -ms-justify-content:center;
         justify-content:center;
     }
-    .grid-container-col-md-justify-content-stretch{
+    .col-md-justify-content-stretch{
         -ms-justify-content:stretch;
         justify-content:stretch;
     }
-    .grid-container-col-md-justify-content-space-around{
+    .col-md-justify-content-space-around{
         -ms-justify-content:space-around;
         justify-content:space-around;
     }
-    .grid-container-col-md-justify-content-space-between{
+    .col-md-justify-content-space-between{
        -ms-justify-content:space-between; 
         justify-content:space-between;
     }
-    .grid-container-col-md-justify-content-space-evenly{
+    .col-md-justify-content-space-evenly{
         -ms-justify-content:space-evenly;
         justify-content:space-evenly;
     }
@@ -585,46 +602,46 @@
     
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-md-align-content-start{
+    .col-md-align-content-start{
         -ms-align-content:start;
         align-content:start;
     }
-    .grid-container-col-md-align-content-end{
+    .col-md-align-content-end{
         -ms-align-content:end;
         align-content:end;
     }
-    .grid-container-col-md-align-content-center{
+    .col-md-align-content-center{
         -ms-align-content:center;
         align-content:center;
     }
     
-    .grid-container-col-md-align-content-stretch{
+    .col-md-align-content-stretch{
         -ms-align-content:stretch;
         align-content:stretch;
     }
-    .grid-container-col-md-align-content-space-around{
+    .col-md-align-content-space-around{
        -ms-align-content:space-around;
         align-content:space-around;
     }
-    .grid-container-col-md-align-content-space-between{
+    .col-md-align-content-space-between{
         -ms-align-content:start;
         align-content:space-between;
     }
-    .grid-container-col-md-align-content-space-evenly{
+    .col-md-align-content-space-evenly{
         -ms-align-content:end;
         align-content:space-evenly;
     }
     
     
-    .grid-container-col-md-grid-auto-flow-row{
+    .col-md-grid-auto-flow-row{
         -ms-align-content:center;
         grid-auto-flow:row;
     }
-    .grid-container-col-md-grid-auto-flow-column{
+    .col-md-grid-auto-flow-column{
         -ms-align-content:stretch;
         grid-auto-flow:column;
     }
-    .grid-container-col-md-grid-auto-flow-dense{
+    .col-md-grid-auto-flow-dense{
         -ms-align-content:space-around;
         grid-auto-flow:dense;
     }
@@ -632,52 +649,52 @@
     
     
     .col-md-1{
-        -ms-grid-column: span 1;
-        grid-column: span 1;
+        -ms-grid-column-end: span 1;
+        grid-column-end: span 1;
     }
     .col-md-2{
-        -ms-grid-column: span 2;
-        grid-column: span 2;
+        -ms-grid-column-end: span 2;
+        grid-column-end: span 2;
     }
     .col-md-3{
-        -ms-grid-column: span 3;
-        grid-column: span 3;
+        -ms-grid-column-end: span 3;
+        grid-column-end: span 3;
     }
     .col-md-4{
-        -ms-grid-column: span 4;
-        grid-column: span 4;
+        -ms-grid-column-end: span 4;
+        grid-column-end: span 4;
     }
     .col-md-5{
-        -ms-grid-column: span 5;
-        grid-column: span 5;
+        -ms-grid-column-end: span 5;
+        grid-column-end: span 5;
     }
     .col-md-6{
-        -ms-grid-column: span 6;
-        grid-column: span 6;
+        -ms-grid-column-end: span 6;
+        grid-column-end: span 6;
     }
     .col-md-7{
-        -ms-grid-column: span 7;
-        grid-column: span 7;
+        -ms-grid-column-end: span 7;
+        grid-column-end: span 7;
     }
     .col-md-8{
-        -ms-grid-column: span 8;
-        grid-column: span 8;
+        -ms-grid-column-end: span 8;
+        grid-column-end: span 8;
     }
     .col-md-9{
-        -ms-grid-column: span 9;
-        grid-column: span 9;
+        -ms-grid-column-end: span 9;
+        grid-column-end: span 9;
     }
     .col-md-10{
-        -ms-grid-column: span 10;
-        grid-column: span 10;
+        -ms-grid-column-end: span 10;
+        grid-column-end: span 10;
     }
     .col-md-11{
-        -ms-grid-column: span 11;
-        grid-column: span 11;
+        -ms-grid-column-end: span 11;
+        grid-column-end: span 11;
     }
     .col-md-12{-ms-justify-self:;
-        -ms-grid-column: span 12;
-        grid-column: span 12;
+        -ms-grid-column-end: span 12;
+        grid-column-end: span 12;
     }
 
 
@@ -721,6 +738,10 @@
         -ms-grid-column-start: 11;
         grid-column-start: 11;
     }
+    .col-md-offset-12{
+        -ms-grid-column-start: 12;
+        grid-column-start: 12;
+    }
 
     
     
@@ -763,19 +784,19 @@
 @media only screen and (min-width:75em){    
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-lg-justify-items-start{
+    .col-lg-justify-items-start{
         -ms-justify-items:start;
         justify-items:start;
     }
-    .grid-container-col-lg-justify-items-end{
+    .col-lg-justify-items-end{
         -ms-justify-items:end;
         justify-items:end;
     }
-    .grid-container-col-lg-justify-items-center{
+    .col-lg-justify-items-center{
         -ms-justify-items:center;
         justify-items:center;
     }
-    .grid-container-col-lg-justify-items-stretch{
+    .col-lg-justify-items-stretch{
         -ms-justify-items:stretch;
         justify-items:stretch;
     }
@@ -783,50 +804,50 @@
     
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-lg-align-items-start{
+    .col-lg-align-items-start{
         -ms-align-items:start;
         align-items:start;
     }
-    .grid-container-col-lg-align-items-end{
+    .col-lg-align-items-end{
         -ms-align-items:end;
         align-items:end;
     }
-    .grid-container-col-lg-align-items-center{
+    .col-lg-align-items-center{
         -ms-align-items:center;
         align-items:center;
     }
-    .grid-container-col-lg-align-items-stretch{
+    .col-lg-align-items-stretch{
         -ms-align-items:stretch;
         align-items:stretch;
     }
     
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-lg-justify-content-start{
+    .col-lg-justify-content-start{
         -ms-justify-content:start;
         justify-content:start;
     }
-    .grid-container-col-lg-justify-content-end{
+    .col-lg-justify-content-end{
         -ms-justify-content:end;
         justify-content:end;
     }
-    .grid-container-col-lg-justify-content-center{
+    .col-lg-justify-content-center{
         -ms-justify-content:center;
         justify-content:center;
     }
-    .grid-container-col-lg-justify-content-stretch{
+    .col-lg-justify-content-stretch{
         -ms-justify-content:stretch;
         justify-content:stretch;
     }
-    .grid-container-col-lg-justify-content-space-around{
+    .col-lg-justify-content-space-around{
         -ms-justify-content:space-around;
         justify-content:space-around;
     }
-    .grid-container-col-lg-justify-content-space-between{
+    .col-lg-justify-content-space-between{
        -ms-justify-content:space-between; 
         justify-content:space-between;
     }
-    .grid-container-col-lg-justify-content-space-evenly{
+    .col-lg-justify-content-space-evenly{
         -ms-justify-content:space-evenly;
         justify-content:space-evenly;
     }
@@ -835,46 +856,46 @@
     
     
     /*IN ORDER FOR THIS TO WORK, ALL ELEMENTS MUST HAVE A DEFINED WIDTH AND HEIGHT*/
-    .grid-container-col-lg-align-content-start{
+    .col-lg-align-content-start{
         -ms-align-content:start;
         align-content:start;
     }
-    .grid-container-col-lg-align-content-end{
+    .col-lg-align-content-end{
         -ms-align-content:end;
         align-content:end;
     }
-    .grid-container-col-lg-align-content-center{
+    .col-lg-align-content-center{
         -ms-align-content:center;
         align-content:center;
     }
     
-    .grid-container-col-lg-align-content-stretch{
+    .col-lg-align-content-stretch{
         -ms-align-content:stretch;
         align-content:stretch;
     }
-    .grid-container-col-lg-align-content-space-around{
+    .col-lg-align-content-space-around{
        -ms-align-content:space-around;
         align-content:space-around;
     }
-    .grid-container-col-lg-align-content-space-between{
+    .col-lg-align-content-space-between{
         -ms-align-content:start;
         align-content:space-between;
     }
-    .grid-container-col-lg-align-content-space-evenly{
+    .col-lg-align-content-space-evenly{
         -ms-align-content:end;
         align-content:space-evenly;
     }
     
     
-    .grid-container-col-lg-grid-auto-flow-row{
+    .col-lg-grid-auto-flow-row{
         -ms-align-content:center;
         grid-auto-flow:row;
     }
-    .grid-container-col-lg-grid-auto-flow-column{
+    .col-lg-grid-auto-flow-column{
         -ms-align-content:stretch;
         grid-auto-flow:column;
     }
-    .grid-container-col-lg-grid-auto-flow-dense{
+    .col-lg-grid-auto-flow-dense{
         -ms-align-content:space-around;
         grid-auto-flow:dense;
     }
@@ -882,52 +903,52 @@
     
     
     .col-lg-1{
-        -ms-grid-column: span 1;
-        grid-column: span 1;
+        -ms-grid-column-end: span 1;
+        grid-column-end: span 1;
     }
     .col-lg-2{
-        -ms-grid-column: span 2;
-        grid-column: span 2;
+        -ms-grid-column-end: span 2;
+        grid-column-end: span 2;
     }
     .col-lg-3{
-        -ms-grid-column: span 3;
-        grid-column: span 3;
+        -ms-grid-column-end: span 3;
+        grid-column-end: span 3;
     }
     .col-lg-4{
-        -ms-grid-column: span 4;
-        grid-column: span 4;
+        -ms-grid-column-end: span 4;
+        grid-column-end: span 4;
     }
     .col-lg-5{
-        -ms-grid-column: span 5;
-        grid-column: span 5;
+        -ms-grid-column-end: span 5;
+        grid-column-end: span 5;
     }
     .col-lg-6{
-        -ms-grid-column: span 6;
-        grid-column: span 6;
+        -ms-grid-column-end: span 6;
+        grid-column-end: span 6;
     }
     .col-lg-7{
-        -ms-grid-column: span 7;
-        grid-column: span 7;
+        -ms-grid-column-end: span 7;
+        grid-column-end: span 7;
     }
     .col-lg-8{
-        -ms-grid-column: span 8;
-        grid-column: span 8;
+        -ms-grid-column-end: span 8;
+        grid-column-end: span 8;
     }
     .col-lg-9{
-        -ms-grid-column: span 9;
-        grid-column: span 9;
+        -ms-grid-column-end: span 9;
+        grid-column-end: span 9;
     }
     .col-lg-10{
-        -ms-grid-column: span 10;
-        grid-column: span 10;
+        -ms-grid-column-end: span 10;
+        grid-column-end: span 10;
     }
     .col-lg-11{
-        -ms-grid-column: span 11;
-        grid-column: span 11;
+        -ms-grid-column-end: span 11;
+        grid-column-end: span 11;
     }
     .col-lg-12{-ms-justify-self:;
-        -ms-grid-column: span 12;
-        grid-column: span 12;
+        -ms-grid-column-end: span 12;
+        grid-column-end: span 12;
     }
 
 
@@ -970,6 +991,10 @@
     .col-lg-offset-11{
         -ms-grid-column-start: 11;
         grid-column-start: 11;
+    }
+    .col-lg-offset-12{
+        -ms-grid-column-start: 12;
+        grid-column-start: 12;
     }
 
     
