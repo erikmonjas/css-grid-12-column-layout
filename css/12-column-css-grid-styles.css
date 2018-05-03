@@ -178,16 +178,24 @@ p{
     grid-template-rows: 4vmax 4vmax;
 }
 
-code{
+.code-block{
     background-color: #272f45;
     padding: 1vmax;
     border-radius: 0.5vmax;
     display: block;
     width: 80%;
-    margin: 0 auto;
+    margin: 3vmax auto;
 }
-.overflow-x-scroll{
-    overflow-x: scroll;
+.code-block p{
+    margin-left: 3vmax;
+    margin-bottom: 5px;
+    text-transform: lowercase;
+    text-align: left;
+    letter-spacing: 0;
+    line-height: 1.3em;
+}
+.code-block p:first-of-type, .code-block p:last-of-type{
+    margin-left: 0;
 }
 .links{
     display: flex;
